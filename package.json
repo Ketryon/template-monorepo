@@ -1,0 +1,11 @@
+{
+  "name": "template-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ketryon Monorepo Template — Next.js web + Express backend + Inngest worker",
+  "scripts": {
+    "build": "pnpm -r build",
+    "clean": "pnpm -r exec rm -rf dist .next"
+  },
+  "packageManager": "pnpm@10.11.0"
+}

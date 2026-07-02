@@ -1,0 +1,54 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-serif: var(--font-playfair), ui-serif, Georgia, Cambria,
+    "Times New Roman", Times, serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo,
+    Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Sage palette (oklch) — change hue to shift entire brand */
+  --color-sage-50: oklch(0.98 0.005 150);
+  --color-sage-100: oklch(0.96 0.01 150);
+  --color-sage-200: oklch(0.91 0.02 148);
+  --color-sage-300: oklch(0.84 0.03 148);
+  --color-sage-400: oklch(0.72 0.04 147);
+  --color-sage-500: oklch(0.6 0.05 147);
+  --color-sage-600: oklch(0.5 0.05 147);
+  --color-sage-700: oklch(0.42 0.04 148);
+  --color-sage-800: oklch(0.35 0.03 150);
+  --color-sage-900: oklch(0.28 0.02 152);
+  --color-sage-950: oklch(0.2 0.02 155);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-sage-500);
+    outline-offset: 2px;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-0.5rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
