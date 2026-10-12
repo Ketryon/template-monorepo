@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "dotenv": "^17.4.2",
-    "drizzle-orm": "^0.44.7",
+    "drizzle-orm": "^0.45.0",
     "express": "^5.3.0",
     "inngest": "^3.54.2",
     "postgres": "^3.4.9"
